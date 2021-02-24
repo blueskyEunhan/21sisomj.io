@@ -5,29 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>1</title>
-  <style>
-    .contextbox {
-      width:1000px; height:600px; border:6px solid navy;
-    }
-    .a {
-      height:40px; width:1000px; border:2px solid navy;
-    }
-    .close-button{
-      width:30px; height:30px; margin-top:4px; margin-left:5px; border:2px solid navy;
-      text-align: center;
-      background-color: navy;
-    }
-    .b{
-      width:1000px; height:555px; border:2px solid navy;
-    }
-  </style>
+  <link rel="stylesheet" href="1style.css">
 </head>
 <body>
   <div class="contextbox">
-    <div class="a">
-       <a href="index.html"> <input type="button" class="close-button"></a>
+      <div class="a">
+        <a href="index.html"><button class="close-button"> X </button></a>
+      </div>
+      <div class="b">
+        <div class="item0"> 버튼을 누르면 <br>랜덤으로 아이템이 나옵니다. </div>
+        <!-- <a href="modal.html"><button id="myBtn"> 뽑기</button></a> -->
+        <button id="myBtn"> 뽑기 </button>
+      </div>
     </div>
-    <div class="b">  </div>
-  </div>
+<!-- Trigger/Open The Modal -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+<!-- Modal content -->
+<div class="modal-content">
+  <p>[  ]가 나왔습니다.</p>
+  <div class="item0"></div>
+  <p>[  ]</p>
+  <button class="oneMorego"> 한번 더 뽑기 </button>
+  <button class="closeRandom"> 닫기 </button>
+ 
+</div>
+
+</div>
+
+<script>
+var cbtn = document.getElementsByClassName("closeRandom")[0];
+  // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+cbtn.onclick = function() {
+modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+if (event.target == modal) {
+  modal.style.display = "none";
+}
+}
+</script>
 </body>
 </html>
