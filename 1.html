@@ -6,8 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>1</title>
   <link rel="stylesheet" href="1style.css">
+  
 </head>
 <body>
+  <!-- <script src="1js.js"></script> -->
   <div class="contextbox">
       <div class="a">
         <a href="index.html"><button class="close-button"> X </button></a>
@@ -25,10 +27,10 @@
 
 <!-- Modal content -->
 <div class="modal-content">
-  <p>[  ]가 나왔습니다.</p>
-  <div class="item0"></div>
-  <p>[  ]</p>
-  <button class="oneMorego"> 한번 더 뽑기 </button>
+  <p>아이템이 나왔습니다.</p>
+  <div id="item1"></div>
+  <p id="rdItem"> </p>
+  <button id="oneMorego"> 한번 더 뽑기 </button>
   <button class="closeRandom"> 닫기 </button>
  
 </div>
@@ -37,15 +39,36 @@
 
 <script>
 var cbtn = document.getElementsByClassName("closeRandom")[0];
-  // Get the modal
+// Get the modal
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
+var onemore = document.getElementById("oneMorego");
 
+var rdnum;
+var showitem = document.getElementById("item1");
+var goitem = document.getElementById("rdItem");
+
+function randomNum(){
+  rdnum = Math.floor(Math.random()*20);
+  if(rdnum<11){
+    goitem.innerHTML="우유";
+    showitem.innerHTML="<img src='item01.png' width='250px'>";
+  }
+  else{
+    goitem.innerHTML=rdnum;
+  }
+  
+}
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
+btn.onclick = function randomgo() {
 modal.style.display = "block";
+randomNum();
+}
+
+onemore.onClick = function(){
+  randomNum();
 }
 // When the user clicks on <span> (x), close the modal
 cbtn.onclick = function() {
@@ -58,6 +81,7 @@ if (event.target == modal) {
   modal.style.display = "none";
 }
 }
+
 </script>
 </body>
 </html>
