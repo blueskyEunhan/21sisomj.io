@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>1</title>
+  <link rel="stylesheet" href="1style.css">
+  
+</head>
+<body>
+  <!-- <script src="1js.js"></script> -->
+  
+    </div>
+    <div class="myscreen">
+      <div class="abox" width="50px"> 
+        <ol>
+          <!-- <li><img src="tjfaud.png" alt="" width="50px"></li>
+          <li><img src="ghkrfbf.png" alt="" width="50px"></li> -->
+          <li><button id="tjfaud"><img src="tjfaud.png" alt="" width="50px"></button></li>
+          <li><button id="ghkrfbf"><img src="ghkrfbf.png" alt="" width="50px"></button></li>
+        </ol>
+        
+        
+      </div>
+      <div class="bbox"> 
+        <a href="index.html"><button class="close-button"> X </button></a>
+        <button id="myBtn"> 뽑 기 </button>
+      </div>
+      <div class="cbox"></div>
+    </div>
+<!-- Trigger/Open The Modal -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+<!-- Modal content -->
+<div class="modal-content">
+  <div class="yes">
+    <div id="item1"></div>
+  <p id="rdItem"> </p>
+  </div>
+  
+  <button id="oneMorego"> 한번 더 뽑기 </button>
+  <button class="closeRandom"> 닫기 </button>
+</div>
+
+<div>
+
+</div>
+</div>
+
+<script>
+var cbtn = document.getElementsByClassName("closeRandom")[0];
+// Get the modal
+var modal = document.getElementById("myModal");
+var tjfaud=document.getElementById("tjfaud");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+var onemore = document.getElementById("oneMorego");
+
+var rdnum;
+var showitem = document.getElementById("item1");
+var goitem = document.getElementById("rdItem");
+
+function randomNum(){
+  rdnum = Math.floor(Math.random()*100);
+  if(rdnum<10){
+    goitem.innerHTML="새로운거";
+    //showitem.innerHTML="<img src='item01.png' width='250px'>";
+    console.log(rdnum);
+  }
+  else if(10<=rdnum&&rdnum<20){
+    goitem.innerHTML="지니";
+    console.log(rdnum);
+  }
+  else if(20<=rdnum&&rdnum<29){
+    goitem.innerHTML="카카오톡";
+  }
+  else if(29<=rdnum&&rdnum<38){
+    goitem.innerHTML="비쥬얼스튜디오";
+  }
+  else if(38<=rdnum&&rdnum<46){
+    goitem.innerHTML="응원봉";
+  }
+  else if(46<=rdnum&&rdnum<54){
+    goitem.innerHTML="마우스";
+  }
+  else if(54<=rdnum&&rdnum<62){
+    goitem.innerHTML="뮤지컬티켓";
+  }
+  else if(62<=rdnum&&rdnum<69){
+    goitem.innerHTML="닌텐도스위치";
+  }
+  else if(69<=rdnum&&rdnum<76){
+    goitem.innerHTML="유니티";
+  }
+  else if(76<=rdnum&&rdnum<83){
+    goitem.innerHTML="컵밥";
+  }
+  else if(83<=rdnum&&rdnum<89){
+    goitem.innerHTML="초콜릿";
+  }
+  else if(89<=rdnum&&rdnum<94){
+    goitem.innerHTML="카메라";
+  }
+  else if(94<=rdnum&&rdnum<97){
+    goitem.innerHTML="물감";
+  }
+  else if(97<=rdnum&&rdnum<99){
+    goitem.innerHTML="일러스트레이터";
+  }
+  else if(99<=rdnum&&rdnum<100){
+    goitem.innerHTML="별";
+  }
+
+  
+}
+// When the user clicks the button, open the modal 
+btn.onclick = function randomgo() {
+modal.style.display = "block";
+randomNum();
+}
+
+onemore.onClick = function(){
+  randomgo();
+}
+// When the user clicks on <span> (x), close the modal
+cbtn.onclick = function() {
+modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+if (event.target == modal) {
+  modal.style.display = "none";
+}
+}
+
+</script>
+</body>
+</html>

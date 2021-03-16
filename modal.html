@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+#myBtn,#myBtn2 {
+  display: block;
+  width: 50px;
+  height: 30px;
+  border: 2px solid navy;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.contextbox {
+  width: 1000px;
+  height: 600px;
+  border: 6px solid navy;
+  margin: auto;
+}
+.a {
+  height: 40px;
+  width: 1000px;
+  border: 2px solid navy;
+}
+.close-button {
+  width: 30px;
+  height: 30px;
+  margin-top: 4px;
+  border: 3px solid navy;
+  text-align: center;
+  font-weight: bolder;
+  background-color: white;
+  float: right;
+  margin-right: 5px;
+}
+.b {
+  width: 1000px;
+  height: 555px;
+  border: 2px solid navy;
+}
+.item0 {
+  width: 300px;
+  height: 300px;
+  background-color: gray;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+    <div class="contextbox">
+        <div class="a">
+          <a href="index.html"><button class="close-button"> X </button></a>
+        </div>
+        <div class="b">
+          <div class="item0"> 버튼을 누르면 <br>랜덤으로 아이템이 나옵니다. </div>
+          <!-- <a href="modal.html"><button id="myBtn"> 뽑기</button></a> -->
+          <button id="myBtn"> ㅇㅇ</button>
+        </div>
+      </div>
+<!-- Trigger/Open The Modal -->
+<button id="myBtn2">뽑기</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+<a href="1.html">assd</a>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+var btn2 = document.getElementById("myBtn2");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+btn2.onclick=function(){
+    modal.style.display="block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
