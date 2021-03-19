@@ -9,14 +9,11 @@
   
 </head>
 <body>
-  <!-- <script src="1js.js"></script> -->
   
     </div>
     <div class="myscreen">
       <div class="abox" width="50px"> 
         <ol>
-          <!-- <li><img src="tjfaud.png" alt="" width="50px"></li>
-          <li><img src="ghkrfbf.png" alt="" width="50px"></li> -->
           <li><button id="qhqrl"><img src="qhqrl.png" alt="" width="50px"></button></li>
           <li><button id="tjfaud" ><a href="2.html"><img src="tjfaud.png" alt="" width="50px"></a></button></li>
           <li><button id="ghkrfbf"><a href="3.html"><img src="ghkrfbf.png" alt="" width="50px"></a></button></li>
@@ -38,7 +35,7 @@
 <!-- Modal content -->
 <div class="modal-content">
   <div class="yes">
-    <div id="item1"></div>
+    <div id="item1"> <div id="item2"></div></div>
   <p id="rdItem"> </p>
   </div>
   
@@ -62,58 +59,70 @@ var btn = document.getElementById("myBtn");
 var onemore = document.getElementById("oneMorego");
 
 var rdnum;
-var showitem = document.getElementById("item1");
+var showitem = document.getElementById("item2");
 var goitem = document.getElementById("rdItem");
 
 function randomNum(){
   rdnum = Math.floor(Math.random()*100);
   if(rdnum<10){
-    goitem.innerHTML="새로운거";
-    //showitem.innerHTML="<img src='item01.png' width='250px'>";
-    console.log(rdnum);
+    goitem.innerHTML="새로움";
+    showitem.innerHTML="<img src='num1.png' width='250px'>";
   }
   else if(10<=rdnum&&rdnum<20){
     goitem.innerHTML="지니";
-    console.log(rdnum);
+    showitem.innerHTML="<img src='num3.png' width='250px'>";
   }
   else if(20<=rdnum&&rdnum<29){
     goitem.innerHTML="카카오톡";
+    showitem.innerHTML="<img src='num2.png' width='250px'>";
   }
   else if(29<=rdnum&&rdnum<38){
     goitem.innerHTML="비쥬얼스튜디오";
+    showitem.innerHTML="<img src='num12.png' width='250px'>";
   }
   else if(38<=rdnum&&rdnum<46){
     goitem.innerHTML="응원봉";
+    showitem.innerHTML="<img src='num5.png' width='250px'>";
   }
   else if(46<=rdnum&&rdnum<54){
     goitem.innerHTML="마우스";
+    showitem.innerHTML="<img src='num8.png' width='250px'>";
   }
   else if(54<=rdnum&&rdnum<62){
     goitem.innerHTML="뮤지컬티켓";
+    showitem.innerHTML="<img src='num11.png' width='250px'>";
   }
   else if(62<=rdnum&&rdnum<69){
     goitem.innerHTML="닌텐도스위치";
+    showitem.innerHTML="<img src='num9.png' width='250px'>";
   }
   else if(69<=rdnum&&rdnum<76){
     goitem.innerHTML="유니티";
+    showitem.innerHTML="<img src='num13.png' width='250px'>";
   }
   else if(76<=rdnum&&rdnum<83){
     goitem.innerHTML="컵밥";
+    showitem.innerHTML="<img src='num10.png' width='250px'>";
   }
   else if(83<=rdnum&&rdnum<89){
-    goitem.innerHTML="초콜릿";
+    goitem.innerHTML="우유";
+    showitem.innerHTML="<img src='num7.png' width='250px'>";
   }
   else if(89<=rdnum&&rdnum<94){
     goitem.innerHTML="카메라";
+    showitem.innerHTML="<img src='item01.png' width='250px'>";
   }
   else if(94<=rdnum&&rdnum<97){
     goitem.innerHTML="물감";
+    showitem.innerHTML="<img src='num14.png' width='250px'>";
   }
   else if(97<=rdnum&&rdnum<99){
     goitem.innerHTML="일러스트레이터";
+    showitem.innerHTML="<img src='num15.png' width='250px'>";
   }
   else if(99<=rdnum&&rdnum<100){
     goitem.innerHTML="별";
+    showitem.innerHTML="<img src='num4.png' width='250px'>";
   }
 
   
